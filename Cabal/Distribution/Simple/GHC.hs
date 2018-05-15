@@ -666,10 +666,10 @@ buildOrReplLib forRepl verbosity numJobs pkg_descr lbi lib clbi = do
                                   ghcOptObjSuffix     = toFlag "p_o"
                                 }
                sharedCxxOpts  = vanillaCxxOpts `mappend` mempty {
-                                  ghcOptFPic        = toFlag True,
-                                  ghcOptDynLinkMode = toFlag GhcDynamicOnly,
-                                  ghcOptObjSuffix   = toFlag "dyn_o"
-                                }
+                                 ghcOptFPic        = toFlag True,
+                                 ghcOptDynLinkMode = toFlag GhcDynamicOnly,
+                                 ghcOptObjSuffix   = toFlag "dyn_o"
+                               }
                odir           = fromFlag (ghcOptObjDir vanillaCxxOpts)
            createDirectoryIfMissingVerbose verbosity True odir
            let runGhcProgIfNeeded cxxOpts = do
