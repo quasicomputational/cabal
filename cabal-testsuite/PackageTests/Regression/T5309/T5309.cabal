@@ -45,7 +45,7 @@ common ffi-build-info
 common language-spec
 
   build-depends:    base       >=4.10.0
-                  , lens
+--                  , lens
        
   default-language: Haskell2010
 
