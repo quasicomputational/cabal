@@ -35,7 +35,6 @@ build_script:
   # Copy the setup script into the spot cabal-tests expects it
   - mkdir dist\setup
   - cp Setup.exe dist\setup
-  - dist\build\cabal-tests\cabal-tests.exe -j3
   # - Setup test --show-details=streaming --test-option=--hide-successes
   - cd ..\cabal-install
   - ghc --make -threaded -i -i. Setup.hs -Wall -Werror
