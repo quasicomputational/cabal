@@ -3,11 +3,11 @@ install:
   # https://github.com/haskell/cabal/issues/3687
   - choco install -y cabal
   - choco install -y ghc --version 8.0.2
-  - C:\msys64\usr\bin\pacman -Sy --noconfirm mingw-w64-x86_64-pkg-config
   - refreshenv
   # See http://help.appveyor.com/discussions/problems/6312-curl-command-not-found#comment_42195491
   # NB: Do this after refreshenv, otherwise it will be clobbered!
-  - set PATH=%APPDATA%\cabal\bin;C:\Program Files\Git\mingw64\bin;%PATH%
+  - set PATH=%APPDATA%\cabal\bin;C:\msys64\usr\bin;C:\Program Files\Git\mingw64\bin;%PATH%
+  - pacman -Sy --noconfirm mingw-w64-x86_64-pkg-config
   - cabal --version
   - cabal update
   - cabal install happy alex
