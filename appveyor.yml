@@ -18,5 +18,5 @@ build_script:
   - cabal new-build lib:Cabal
   - cabal new-test Cabal
   - cabal new-build exe:cabal
-  - cabal new-run cabal-tests -- -j3 --with-cabal=..\cabal-install\dist-newstyle\build\x86_64-win32\cabal-install-2.3.0.0\build\cabal\cabal.exe
+  - cabal new-run cabal-tests -- -j3 --with-cabal=..\cabal-install\dist-newstyle\build\x86_64-windows\cabal-install-2.3.0.0\build\cabal\cabal.exe
   - cabal new-test cabal-install
