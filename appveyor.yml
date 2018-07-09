@@ -9,6 +9,7 @@ install:
   - set PATH=%APPDATA%\cabal\bin;C:\Program Files\Git\mingw64\bin;%PATH%
   - cabal --version
   - cabal update
+  - cabal install happy alex
 
 cache:
   - dist-newstyle
