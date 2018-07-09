@@ -9,8 +9,6 @@ install:
   - set PATH=%APPDATA%\cabal\bin;C:\Program Files\Git\mingw64\bin;%PATH%
   - cabal --version
   - cabal update
-  # Install parsec, text and mtl, also alex and happy
-  - echo "" | appveyor-retry cabal install parsec-3.1.13.0 text-1.2.3.0 mtl-2.2.2 alex-3.2.4 happy-1.19.9
 
 cache:
   - dist-newstyle
